@@ -57,7 +57,7 @@ function App() {
       </div>
       <section className="flex flex-col md:flex-row gap-10 items-center justify-between width-[80%] mb-24">
         <img
-          className="w-[200px] h-[200px] md:h-[400px] md:w-[400px]"
+          className="w-[200px] h-[200px] md:h-[400px] md:w-[400px] md:hover:animate-wiggle"
           src="https://avataaars.io/?avatarStyle=Circle&topType=ShortHairShortFlat&accessoriesType=Prescription02&hairColor=BrownDark&facialHairType=BeardLight&facialHairColor=BrownDark&clotheType=BlazerShirt&eyeType=Happy&eyebrowType=Default&mouthType=Default&skinColor=Light"
           alt="avatar"
           width="400px"
@@ -84,7 +84,7 @@ function App() {
               />
             </button>
           </div>
-          <button className="mt-5 px-4 py-2 hover:bg-primario rounded-md transition font-semibold text-md">
+          <button className="mt-5 px-4 py-2 hover:bg-primario rounded-md md:shadow-none shadow-sm shadow-primario transition font-semibold text-md">
             Contáctame
           </button>
         </div>
@@ -109,7 +109,7 @@ function App() {
           <h2 className="text-2xl hover:text-primario pb-5 hover:underline">
             Soft Skills
           </h2>
-          <div className="flex flex-wrap gap-5 justify-center">
+          <div className="flex flex-wrap gap-5 md:gap-10 justify-center">
             <div className="flex flex-col items-center">
               <Icon icon="fluent-mdl2:teamwork" style={{ fontSize: "36px" }} />
               <span>Trabajo en equipo</span>
@@ -158,7 +158,7 @@ function App() {
             </div>
           </div>
 
-          <div className="md:max-w-[30%] p-4 bg-blanco hover:bg-primario transition rounded-md hover:scale-105 flex flex-col justify-around">
+          <div className="md:max-w-[30%] p-4 bg-blanco hover:bg-primario transition rounded-md hover:scale-105 flex flex-col justify-around ">
             <img className="rounded-md" src="/img/weather.png" alt="" />
             <div className="text-[black] pt-4">
               Proyecto particular. Conecta con la API OpenWeather. Utilizando

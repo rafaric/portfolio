@@ -144,22 +144,14 @@ function App() {
         </h2>
         <div className="flex md:flex-row flex-col gap-6 flex-wrap justify-center">
           <div className="md:max-w-[30%] p-4 bg-blanco hover:bg-primario transition rounded-md hover:scale-105 flex flex-col justify-around">
-            <img
-              className="rounded-md"
-              src="../src/assets/img/e-commerce.png"
-              alt=""
-            />
+            <img className="rounded-md" src="/img/e-commerce.png" alt="" />
             <div className="text-[black] pt-4 flex items-center">
               Proyecto diseñado para el curso de Alura-One. Se utilizó HTML y
               CSS
             </div>
           </div>
           <div className="md:max-w-[30%] p-4 bg-blanco hover:bg-primario transition rounded-md hover:scale-105 flex flex-col justify-around">
-            <img
-              className="rounded-md"
-              src="../src/assets/img/Screenshot.png"
-              alt=""
-            />
+            <img className="rounded-md" src="/img/Screenshot.png" alt="" />
             <div className="text-[black] pt-4">
               Proyecto diseñado para el curso de Alura-One. Se utilizó HTML y
               CSS
@@ -167,11 +159,7 @@ function App() {
           </div>
 
           <div className="md:max-w-[30%] p-4 bg-blanco hover:bg-primario transition rounded-md hover:scale-105 flex flex-col justify-around">
-            <img
-              className="rounded-md"
-              src="../src/assets/img/weather.png"
-              alt=""
-            />
+            <img className="rounded-md" src="/img/weather.png" alt="" />
             <div className="text-[black] pt-4">
               Proyecto particular. Conecta con la API OpenWeather. Utilizando
               HTML, CSS y React.
@@ -182,11 +170,7 @@ function App() {
       <section id="demos" className="max-w-5xl justify-center mx-auto my-20">
         <div className="flex gap-6 flex-wrap justify-center">
           <div className="md:md:max-w-[30%] p-4 bg-blanco hover:bg-primario transition rounded-md hover:scale-105 flex flex-col justify-around group">
-            <img
-              className="rounded-md"
-              src="../src/assets/img/bank.png"
-              alt=""
-            />
+            <img className="rounded-md" src="/img/bank.png" alt="" />
             <p className="text-[black] pt-4 flex items-center">
               Proyecto diseñado para el curso de Alura-One. Se utilizó HTML y
               CSS y Javascript
@@ -208,11 +192,7 @@ function App() {
             </p>
           </div>
           <div className="md:max-w-[30%] p-4 bg-blanco hover:bg-primario transition rounded-md hover:scale-105 flex flex-col justify-around group">
-            <img
-              className="rounded-md"
-              src="../src/assets/img/encriptador.png"
-              alt=""
-            />
+            <img className="rounded-md" src="/img/encriptador.png" alt="" />
             <p className="text-[black] pt-4 flex items-center">
               Proyecto diseñado para el curso de Alura-One. Se utilizó HTML y
               CSS y Javascript
@@ -234,11 +214,7 @@ function App() {
             </p>
           </div>
           <div className="md:max-w-[30%] p-4 bg-blanco hover:bg-primario transition rounded-md hover:scale-105 flex flex-col justify-around group">
-            <img
-              className="rounded-md"
-              src="../src/assets/img/SocialArmy.png"
-              alt=""
-            />
+            <img className="rounded-md" src="/img/SocialArmy.png" alt="" />
             <p className="text-[black] pt-4">
               Proyecto particular, simulando red Social orientada a fanaticos de
               BTS. Fue realizado con HTML, React, Tailwind y NextJS.
@@ -260,11 +236,7 @@ function App() {
             </p>
           </div>
           <div className="md:max-w-[30%] p-4 bg-blanco hover:bg-primario transition rounded-md hover:scale-105 flex flex-col justify-around group">
-            <img
-              className="rounded-md"
-              src="../src/assets/img/funco.png"
-              alt=""
-            />
+            <img className="rounded-md" src="/img/funco.png" alt="" />
             <p className="text-[black] pt-4">
               Proyecto del curso Codo a Codo - Full Stack. Se utiliza HTML, CSS,
               NodeJs, ExpressJs y MySql En progreso...
@@ -286,11 +258,7 @@ function App() {
             </p>
           </div>
           <div className="md:max-w-[30%] p-4 bg-blanco hover:bg-primario transition rounded-md hover:scale-105 flex flex-col justify-around group">
-            <img
-              className="rounded-md"
-              src="../src/assets/img/otrosproyectos.png"
-              alt=""
-            />
+            <img className="rounded-md" src="/img/otrosproyectos.png" alt="" />
             <p className="text-[black] pt-4">
               Otros proyectos varios. Se utiliza HTML, CSS y React.
             </p>
@@ -355,11 +323,7 @@ function App() {
             </ul>
           </div>
           <div className="md:max-w-[30%] p-4 bg-blanco hover:bg-primario transition rounded-md hover:scale-105 flex flex-col justify-around">
-            <img
-              className="py-12"
-              src="../src/assets/img/informatorio.png"
-              alt=""
-            />
+            <img className="py-12" src="/img/informatorio.png" alt="" />
             <ul className="text-[black] text-start list-disc pl-5">
               <li>Introducción a la Programación</li>
               <li>Desarrollo Web</li>
@@ -367,11 +331,7 @@ function App() {
             </ul>
           </div>
           <div className="md:max-w-[30%] p-4 bg-blanco hover:bg-primario transition rounded-md hover:scale-105 flex flex-col justify-around">
-            <img
-              className="h-52"
-              src="../src/assets/img/codoacodo.jfif"
-              alt=""
-            />
+            <img className="h-52" src="/img/codoacodo.jfif" alt="" />
             <ul className="text-[black] text-start list-disc pl-5">
               <li>Introducción a Big Data</li>
               <li>FullStack Developer - JavaScript/NodeJs (En curso)</li>
@@ -380,7 +340,7 @@ function App() {
           <div className="md:max-w-[30%] p-4 bg-blanco hover:bg-primario transition rounded-md hover:scale-105 flex flex-col justify-around">
             <img
               className="bg-[#0c305f] p-3 h-[60%]"
-              src="../src/assets/img/allura.svg"
+              src="/img/allura.svg"
               alt=""
             />
             <ul className="text-[black] text-start list-disc pl-5">

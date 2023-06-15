@@ -38,9 +38,11 @@ function App() {
           className="block w-[40px] h-[40px] p-2 text-center items-center"
         />
       </button>
-      <div className="flex font-bold text-xs md:text-lg justify-end px-3 py-6">
+      <div className="flex font-bold text-xs w-full md:text-lg justify-end px-3 py-6 fixed md:right-12 right-5 bg-[#111] bg-opacity-60 z-50">
         <ul className="flex list-none items-center gap-2 md:gap-12">
-          <li className="hover:text-primario cursor-pointer">Inicio</li>
+          <li className="hover:text-primario cursor-pointer">
+            <a href="#root">Inicio</a>
+          </li>
           <li className="hover:text-primario cursor-pointer">
             <a href="#about">Acerca de mi</a>
           </li>
@@ -55,7 +57,7 @@ function App() {
           </li>
         </ul>
       </div>
-      <section className="flex flex-col md:flex-row gap-10 items-center justify-between width-[80%] mb-24">
+      <section className="flex flex-col md:flex-row gap-10 items-center justify-between width-[80%] my-24">
         <img
           className="w-[200px] h-[200px] md:h-[400px] md:w-[400px] md:hover:animate-wiggle"
           src="https://avataaars.io/?avatarStyle=Circle&topType=ShortHairShortFlat&accessoriesType=Prescription02&hairColor=BrownDark&facialHairType=BeardLight&facialHairColor=BrownDark&clotheType=BlazerShirt&eyeType=Happy&eyebrowType=Default&mouthType=Default&skinColor=Light"
@@ -64,34 +66,48 @@ function App() {
           height="400px"
         />
         <div className="flex flex-col items-center gap-3">
-          <h1 className="align-middle justify-center text-3xl md:text-5xl">
+          <h1 className="align-middle justify-center text-3xl md:text-5xl font-title">
             RAFAEL RICARDO STRONGOLI{" "}
           </h1>
           <h2 className="text-3xl text-primario hover:bg-primario hover:text-blanco transition px-4">
             Front-End Developer
           </h2>
           <div className="flex gap-4">
-            <button className="hover:scale-105">
+            <a
+              href="https://github.com/rafaric"
+              target="_blank"
+              rel="noreferrer"
+              className="hover:scale-105"
+            >
               <Icon
                 icon="bytesize:github"
                 style={{ fontSize: "36px", color: "#eee" }}
               />
-            </button>
-            <button className="hover:scale-105">
+            </a>
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="https://www.linkedin.com/in/rafael-strongoli/"
+              className="hover:scale-105"
+            >
               <Icon
                 icon="fa-brands:linkedin"
                 style={{ fontSize: "38px", color: "#eee" }}
               />
-            </button>
+            </a>
           </div>
-          <button className="mt-5 px-4 py-2 hover:bg-primario rounded-md md:shadow-none shadow-sm shadow-primario transition font-semibold text-md">
+          <a
+            id="about"
+            className="mt-5 px-4 py-2 hover:bg-primario rounded-md md:shadow-none shadow-sm shadow-primario transition font-semibold text-md"
+            href="mailto:rafaelstrongoli@gmail.com"
+          >
             Contáctame
-          </button>
+          </a>
         </div>
       </section>
-      <section id="about" className="max-w-4xl justify-center mx-auto my-20">
+      <section className="max-w-4xl justify-center mx-auto my-20">
         <div className="flex flex-col mb-5">
-          <h3 className="text-2xl hover:text-primario pb-5 hover:underline">
+          <h3 className="text-3xl hover:text-primario pb-5 hover:underline font-title">
             Acerca de mí
           </h3>
           <p className="about-contenido">
@@ -106,7 +122,7 @@ function App() {
           </p>
         </div>
         <div className="flex flex-col">
-          <h2 className="text-2xl hover:text-primario pb-5 hover:underline">
+          <h2 className="text-3xl hover:text-primario pb-5 hover:underline font-title">
             Soft Skills
           </h2>
           <div className="flex flex-wrap gap-5 md:gap-10 justify-center">
@@ -139,7 +155,7 @@ function App() {
         id="proyectos"
         className="max-w-5xl justify-center mx-auto my-20"
       >
-        <h2 className="text-2xl hover:text-primario pb-5 hover:underline">
+        <h2 className="text-3xl hover:text-primario pb-5 hover:underline font-title">
           Proyectos
         </h2>
         <div className="flex md:flex-row flex-col gap-6 flex-wrap justify-center">
@@ -281,7 +297,7 @@ function App() {
         </div>
       </section>
       <section id="certificados" className="flex flex-col items-center">
-        <h2 className="text-2xl hover:text-primario pb-5 hover:underline">
+        <h2 className="text-3xl hover:text-primario pb-5 hover:underline font-title">
           Cursos y certificados
         </h2>
         <div className="flex flex-wrap gap-6 justify-between">

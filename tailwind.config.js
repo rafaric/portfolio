@@ -2,6 +2,10 @@
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
+    fontFamily: {
+      body: ['"Inter"'],
+      title: ['"Titulos"'],
+    },
     colors: {
       primario: "#65c9ff",
       secundario: "#22f",

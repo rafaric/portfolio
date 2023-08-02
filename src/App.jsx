@@ -274,6 +274,28 @@ function App() {
             </p>
           </div>
           <div className="md:max-w-[30%] p-4 bg-blanco hover:bg-primario transition rounded-md hover:scale-105 flex flex-col justify-around group">
+            <img className="rounded-md" src="/img/bnb.png" alt="" />
+            <p className="text-[black] pt-4">
+              Clon de Airbnb. Se utiliza HTML, Tailwind, React, NodeJS, MongoDb,
+              Prisma.
+            </p>
+            <p className="text-primario group-hover:text-secundario">
+              <a
+                href="https://github.com/rafaric/airbnb-clone"
+                className="hover:text-secundario hover:opacity-60"
+              >
+                Github
+              </a>{" "}
+              -{" "}
+              <a
+                href="https://renthouse-git-main-rafaric.vercel.app/"
+                className="hover:text-secundario hover:opacity-60"
+              >
+                Demo
+              </a>
+            </p>
+          </div>
+          <div className="md:max-w-[30%] p-4 bg-blanco hover:bg-primario transition rounded-md hover:scale-105 flex flex-col justify-around group">
             <img className="rounded-md" src="/img/otrosproyectos.png" alt="" />
             <p className="text-[black] pt-4">
               Otros proyectos varios. Se utiliza HTML, CSS y React.

@@ -4,7 +4,11 @@ import { Icon } from "@iconify/react";
 
 function App() {
   const [visible, setVisible] = useState(false);
-
+  const demoClick = (e, link) => {
+    if (e.target.nodeName !== "A") {
+      window.open(link, "_blank");
+    }
+  };
   const toggleVisible = () => {
     const scrolled = document.documentElement.scrollTop;
     if (scrolled > 300) {
@@ -185,7 +189,12 @@ function App() {
       </section>
       <section id="demos" className="max-w-5xl justify-center mx-auto my-20">
         <div className="flex gap-6 flex-wrap justify-center">
-          <div className="md:md:max-w-[30%] p-4 bg-blanco hover:bg-primario transition rounded-md hover:scale-105 flex flex-col justify-around group">
+          <div
+            className="md:md:max-w-[30%] p-4 bg-blanco hover:bg-primario transition rounded-md hover:scale-105 flex flex-col justify-around group hover:cursor-pointer"
+            onClick={(e) =>
+              demoClick(e, "https://shimmering-babka-a16d0f.netlify.app/")
+            }
+          >
             <img className="rounded-md" src="/img/bank.png" alt="" />
             <p className="text-[black] pt-4 flex items-center">
               Proyecto diseñado para el curso de Alura-One. Se utilizó HTML y
@@ -195,19 +204,19 @@ function App() {
               <a
                 href="https://github.com/rafaric/gastoscontema.git"
                 className="hover:text-secundario hover:opacity-60"
+                target="_blank"
+                rel="noreferrer"
               >
                 Github
               </a>{" "}
-              -{" "}
-              <a
-                href="https://shimmering-babka-a16d0f.netlify.app/"
-                className="hover:text-secundario hover:opacity-60"
-              >
-                Demo
-              </a>
             </p>
           </div>
-          <div className="md:max-w-[30%] p-4 bg-blanco hover:bg-primario transition rounded-md hover:scale-105 flex flex-col justify-around group">
+          <div
+            className="md:max-w-[30%] p-4 bg-blanco hover:bg-primario transition rounded-md hover:scale-105 flex flex-col justify-around group hover:cursor-pointer"
+            onClick={(e) =>
+              demoClick(e, "https://rafaric.github.io/encriptador-allura/")
+            }
+          >
             <img className="rounded-md" src="/img/encriptador.png" alt="" />
             <p className="text-[black] pt-4 flex items-center">
               Proyecto diseñado para el curso de Alura-One. Se utilizó HTML y
@@ -217,19 +226,17 @@ function App() {
               <a
                 href="https://github.com/rafaric/encriptador-allura.git"
                 className="hover:text-secundario hover:opacity-60"
+                target="_blank"
+                rel="noreferrer"
               >
                 Github
               </a>{" "}
-              -{" "}
-              <a
-                href="https://rafaric.github.io/encriptador-allura/"
-                className="hover:text-secundario hover:opacity-60"
-              >
-                Demo
-              </a>
             </p>
           </div>
-          <div className="md:max-w-[30%] p-4 bg-blanco hover:bg-primario transition rounded-md hover:scale-105 flex flex-col justify-around group">
+          <div
+            className="md:max-w-[30%] p-4 bg-blanco hover:bg-primario transition rounded-md hover:scale-105 flex flex-col justify-around group hover:cursor-pointer"
+            onClick={(e) => demoClick(e, "https://socialarmy.vercel.app/")}
+          >
             <img className="rounded-md" src="/img/SocialArmy.png" alt="" />
             <p className="text-[black] pt-4">
               Proyecto particular, simulando red Social orientada a fanaticos de
@@ -239,19 +246,19 @@ function App() {
               <a
                 href="https://github.com/rafaric/socialarmy2.git"
                 className="hover:text-secundario hover:opacity-60"
+                target="_blank"
+                rel="noreferrer"
               >
                 Github
               </a>{" "}
-              -{" "}
-              <a
-                href="https://socialarmy.vercel.app/"
-                className="hover:text-secundario hover:opacity-60"
-              >
-                Demo
-              </a>
             </p>
           </div>
-          <div className="md:max-w-[30%] p-4 bg-blanco hover:bg-primario transition rounded-md hover:scale-105 flex flex-col justify-around group">
+          <div
+            className="md:max-w-[30%] p-4 bg-blanco hover:bg-primario transition rounded-md hover:scale-105 flex flex-col justify-around group hover:cursor-pointer"
+            onClick={(e) =>
+              demoClick(e, "https://rafaric.github.io/funkoshop/")
+            }
+          >
             <img className="rounded-md" src="/img/funco.png" alt="" />
             <p className="text-[black] pt-4">
               Proyecto del curso Codo a Codo - Full Stack. Se utiliza HTML, CSS,
@@ -261,19 +268,19 @@ function App() {
               <a
                 href="https://github.com/rafaric/funkoshop.git"
                 className="hover:text-secundario hover:opacity-60"
+                target="_blank"
+                rel="noreferrer"
               >
                 Github
               </a>{" "}
-              -{" "}
-              <a
-                href="https://rafaric.github.io/funkoshop/"
-                className="hover:text-secundario hover:opacity-60"
-              >
-                Demo
-              </a>
             </p>
           </div>
-          <div className="md:max-w-[30%] p-4 bg-blanco hover:bg-primario transition rounded-md hover:scale-105 flex flex-col justify-around group">
+          <div
+            className="md:max-w-[30%] p-4 bg-blanco hover:bg-primario transition rounded-md hover:scale-105 flex flex-col justify-around group hover:cursor-pointer"
+            onClick={(e) =>
+              demoClick(e, "https://renthouse-git-main-rafaric.vercel.app/")
+            }
+          >
             <img className="rounded-md" src="/img/bnb.png" alt="" />
             <p className="text-[black] pt-4">
               Clon de Airbnb. Se utiliza HTML, Tailwind, React, NodeJS, MongoDb,
@@ -283,19 +290,19 @@ function App() {
               <a
                 href="https://github.com/rafaric/airbnb-clone"
                 className="hover:text-secundario hover:opacity-60"
+                target="_blank"
+                rel="noreferrer"
               >
                 Github
               </a>{" "}
-              -{" "}
-              <a
-                href="https://renthouse-git-main-rafaric.vercel.app/"
-                className="hover:text-secundario hover:opacity-60"
-              >
-                Demo
-              </a>
             </p>
           </div>
-          <div className="md:max-w-[30%] p-4 bg-blanco hover:bg-primario transition rounded-md hover:scale-105 flex flex-col justify-around group">
+          <div
+            className="md:max-w-[30%] p-4 bg-blanco hover:bg-primario transition rounded-md hover:scale-105 flex flex-col justify-around group hover:cursor-pointer"
+            onClick={(e) =>
+              demoClick(e, "https://rafaelstrongoliportfolio.netlify.app/")
+            }
+          >
             <img className="rounded-md" src="/img/otrosproyectos.png" alt="" />
             <p className="text-[black] pt-4">
               Otros proyectos varios. Se utiliza HTML, CSS y React.
@@ -303,16 +310,11 @@ function App() {
             <p className="text-primario group-hover:text-secundario">
               <a
                 href="https://github.com/rafaric/proyectosinfo.git"
-                className="hover:text-secundario hover:opacity-60"
+                className="hover:text-secundario hover:opacity-60 z-50"
+                target="_blank"
+                rel="noreferrer"
               >
                 Github
-              </a>{" "}
-              -{" "}
-              <a
-                href="https://rafaelstrongoliportfolio.netlify.app/"
-                className="hover:text-secundario hover:opacity-60"
-              >
-                Demo
               </a>
             </p>
           </div>

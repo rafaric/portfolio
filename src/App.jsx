@@ -299,6 +299,27 @@ function App() {
           </div>
           <div
             className="md:max-w-[30%] p-4 bg-blanco hover:bg-primario transition rounded-md hover:scale-105 flex flex-col justify-around group hover:cursor-pointer"
+            onClick={(e) => demoClick(e, "https://thinderpet.vercel.app/")}
+          >
+            <img className="rounded-md" src="/img/thinderpet.gif" alt="" />
+            <p className="text-[black] pt-4">
+              ThinderPet, desarrollado en la emulación de No-Country, junto con
+              un equipo de desarrollo. Se siguió los lineamientos del grupo de
+              UX/UI, y tomando los datos de una API desarrollada de 0.
+            </p>
+            <p className="text-primario group-hover:text-secundario">
+              <a
+                href="https://github.com/No-Country/c13-36-t-node-react/tree/front"
+                className="hover:text-secundario hover:opacity-60"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Github
+              </a>{" "}
+            </p>
+          </div>
+          <div
+            className="md:max-w-[30%] p-4 bg-blanco hover:bg-primario transition rounded-md hover:scale-105 flex flex-col justify-around group hover:cursor-pointer"
             onClick={(e) =>
               demoClick(e, "https://rafaelstrongoliportfolio.netlify.app/")
             }

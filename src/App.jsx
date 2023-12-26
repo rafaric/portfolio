@@ -162,30 +162,6 @@ function App() {
         <h2 className="text-3xl hover:text-primario pb-5 hover:underline font-title">
           Proyectos
         </h2>
-        <div className="flex md:flex-row flex-col gap-6 flex-wrap justify-center">
-          <div className="md:max-w-[30%] p-4 bg-blanco hover:bg-primario transition rounded-md hover:scale-105 flex flex-col justify-around">
-            <img className="rounded-md" src="/img/e-commerce.png" alt="" />
-            <div className="text-[black] pt-4 flex items-center">
-              Proyecto diseñado para el curso de Alura-One. Se utilizó HTML y
-              CSS
-            </div>
-          </div>
-          <div className="md:max-w-[30%] p-4 bg-blanco hover:bg-primario transition rounded-md hover:scale-105 flex flex-col justify-around">
-            <img className="rounded-md" src="/img/Screenshot.png" alt="" />
-            <div className="text-[black] pt-4">
-              Proyecto diseñado para el curso de Alura-One. Se utilizó HTML y
-              CSS
-            </div>
-          </div>
-
-          <div className="md:max-w-[30%] p-4 bg-blanco hover:bg-primario transition rounded-md hover:scale-105 flex flex-col justify-around ">
-            <img className="rounded-md" src="/img/weather.png" alt="" />
-            <div className="text-[black] pt-4">
-              Proyecto particular. Conecta con la API OpenWeather. Utilizando
-              HTML, CSS y React.
-            </div>
-          </div>
-        </div>
       </section>
       <section id="demos" className="max-w-5xl justify-center mx-auto my-20">
         <div className="flex gap-6 flex-wrap justify-center">
@@ -320,6 +296,27 @@ function App() {
           </div>
           <div
             className="md:max-w-[30%] p-4 bg-blanco hover:bg-primario transition rounded-md hover:scale-105 flex flex-col justify-around group hover:cursor-pointer"
+            onClick={(e) => demoClick(e, "https://nearbytour.vercel.app/home")}
+          >
+            <img className="rounded-md" src="/img/nearbytour.png" alt="" />
+            <p className="text-[black] pt-4">
+              NearByTour, desarrollado en la emulación de No-Country, junto con
+              un equipo de UX/UI, FrontEnd y Backend. Trabajo de 1 mes
+              utilizando diseños del equipo. React, Tailwind, axios.
+            </p>
+            <p className="text-primario group-hover:text-secundario">
+              <a
+                href="https://github.com/No-Country/s11-21-react-next"
+                className="hover:text-secundario hover:opacity-60"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Github
+              </a>{" "}
+            </p>
+          </div>
+          <div
+            className="md:max-w-[30%] p-4 bg-blanco hover:bg-primario transition rounded-md hover:scale-105 flex flex-col justify-around group hover:cursor-pointer"
             onClick={(e) =>
               demoClick(e, "https://rafaelstrongoliportfolio.netlify.app/")
             }
@@ -388,14 +385,15 @@ function App() {
             <ul className="text-[black] text-start list-disc pl-5">
               <li>Introducción a la Programación</li>
               <li>Desarrollo Web</li>
-              <li>Especialización en Tecnlogías de Desarrollo - React</li>
+              <li>Especialización en Tecnologías de Desarrollo - React</li>
             </ul>
           </div>
           <div className="md:max-w-[30%] p-4 bg-blanco hover:bg-primario transition rounded-md hover:scale-105 flex flex-col justify-around">
             <img className="h-52" src="/img/codoacodo.jfif" alt="" />
             <ul className="text-[black] text-start list-disc pl-5">
               <li>Introducción a Big Data</li>
-              <li>FullStack Developer - JavaScript/NodeJs (En curso)</li>
+              <li>FullStack Developer - JavaScript/NodeJs</li>
+              <li>FrontEnd Developer</li>
             </ul>
           </div>
           <div className="md:max-w-[30%] p-4 bg-blanco hover:bg-primario transition rounded-md hover:scale-105 flex flex-col justify-around">
@@ -410,6 +408,12 @@ function App() {
               <li>Business Agility G4 - ONE</li>
               <li>Front End G4 - ONE</li>
               <li>Emprendimiento G4 - ONE React G4 - ONE</li>
+            </ul>
+          </div>
+          <div className="md:max-w-[30%] p-4 bg-blanco hover:bg-primario transition rounded-md hover:scale-105 flex flex-col justify-around">
+            <img className="h-52" src="/img/INGLES.png" alt="" />
+            <ul className="text-[black] text-start list-disc pl-5">
+              <li>Certificado Ingles C2</li>
             </ul>
           </div>
         </div>

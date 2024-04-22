@@ -54,9 +54,6 @@ function App() {
             <a href="#proyectos">Proyectos</a>
           </li>
           <li className="hover:text-primario cursor-pointer">
-            <a href="#demos">Demos</a>
-          </li>
-          <li className="hover:text-primario cursor-pointer">
             <a href="#certificados">Certificados</a>
           </li>
         </ul>
@@ -171,7 +168,11 @@ function App() {
               demoClick(e, "https://shimmering-babka-a16d0f.netlify.app/")
             }
           >
-            <img className="rounded-md" src="/img/bank.png" alt="" />
+            <img
+              className="rounded-md cursor-zoom-in"
+              src="/img/bank.png"
+              alt=""
+            />
             <p className="text-[black] pt-4 flex items-center">
               Proyecto diseñado para el curso de Alura-One. Se utilizó HTML y
               CSS y Javascript
@@ -213,7 +214,11 @@ function App() {
             className="md:max-w-[30%] p-4 bg-blanco hover:bg-primario transition rounded-md hover:scale-105 flex flex-col justify-around group hover:cursor-pointer"
             onClick={(e) => demoClick(e, "https://socialarmy.vercel.app/")}
           >
-            <img className="rounded-md" src="/img/SocialArmy.png" alt="" />
+            <img
+              className="rounded-md cursor-zoom-in"
+              src="/img/SocialArmy.png"
+              alt=""
+            />
             <p className="text-[black] pt-4">
               Proyecto particular, simulando red Social orientada a fanaticos de
               BTS. Fue realizado con HTML, React, Tailwind y NextJS.
@@ -235,7 +240,11 @@ function App() {
               demoClick(e, "https://rafaric.github.io/funkoshop/")
             }
           >
-            <img className="rounded-md" src="/img/funco.png" alt="" />
+            <img
+              className="rounded-md cursor-zoom-in"
+              src="/img/funco.png"
+              alt=""
+            />
             <p className="text-[black] pt-4">
               Proyecto del curso Codo a Codo - Full Stack. Se utiliza HTML, CSS,
               NodeJs, ExpressJs y MySql En progreso...
@@ -257,7 +266,11 @@ function App() {
               demoClick(e, "https://renthouse-git-main-rafaric.vercel.app/")
             }
           >
-            <img className="rounded-md" src="/img/bnb.png" alt="" />
+            <img
+              className="rounded-md cursor-zoom-in"
+              src="/img/bnb.png"
+              alt=""
+            />
             <p className="text-[black] pt-4">
               Clon de Airbnb. Se utiliza HTML, Tailwind, React, NodeJS, MongoDb,
               Prisma.
@@ -277,7 +290,11 @@ function App() {
             className="md:max-w-[30%] p-4 bg-blanco hover:bg-primario transition rounded-md hover:scale-105 flex flex-col justify-around group hover:cursor-pointer"
             onClick={(e) => demoClick(e, "https://thinderpet.vercel.app/")}
           >
-            <img className="rounded-md" src="/img/thinderpet.gif" alt="" />
+            <img
+              className="rounded-md cursor-zoom-in"
+              src="/img/thinderpet.gif"
+              alt=""
+            />
             <p className="text-[black] pt-4">
               ThinderPet, desarrollado en la emulación de No-Country, junto con
               un equipo de desarrollo. Se siguió los lineamientos del grupo de
@@ -298,7 +315,11 @@ function App() {
             className="md:max-w-[30%] p-4 bg-blanco hover:bg-primario transition rounded-md hover:scale-105 flex flex-col justify-around group hover:cursor-pointer"
             onClick={(e) => demoClick(e, "https://nearbytour.vercel.app/home")}
           >
-            <img className="rounded-md" src="/img/nearbytour.png" alt="" />
+            <img
+              className="rounded-md cursor-zoom-in"
+              src="/img/nearbytour.png"
+              alt=""
+            />
             <p className="text-[black] pt-4">
               NearByTour, desarrollado en la emulación de No-Country, junto con
               un equipo de UX/UI, FrontEnd y Backend. Trabajo de 1 mes
@@ -317,11 +338,42 @@ function App() {
           </div>
           <div
             className="md:max-w-[30%] p-4 bg-blanco hover:bg-primario transition rounded-md hover:scale-105 flex flex-col justify-around group hover:cursor-pointer"
+            onClick={(e) => demoClick(e, "https:/santicuoreph.com")}
+          >
+            <img
+              className="rounded-md cursor-zoom-in"
+              src="/img/santicuore.png"
+              alt=""
+            />
+            <p className="text-[black] pt-4">
+              Landing Page de Santiago Garcia, fotografo profesional -
+              SanticuorePh. Cliente real de la experiencia laboral de FooTalent
+              Group. Trabajo de equipo multidisciplinario utilizando NextJs 14,
+              Typescript, TailwindCSS, React-hook-form, emailJs, y otras
+              librerías.
+            </p>
+            <p className="text-primario group-hover:text-secundario">
+              <a
+                href="https://github.com/FooTalent/Landing-SantiCuoreph"
+                className="hover:text-secundario hover:opacity-60"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Github
+              </a>{" "}
+            </p>
+          </div>
+          <div
+            className="md:max-w-[30%] p-4 bg-blanco hover:bg-primario transition rounded-md hover:scale-105 flex flex-col justify-around group hover:cursor-pointer"
             onClick={(e) =>
               demoClick(e, "https://rafaelstrongoliportfolio.netlify.app/")
             }
           >
-            <img className="rounded-md" src="/img/otrosproyectos.png" alt="" />
+            <img
+              className="rounded-md cursor-zoom-in"
+              src="/img/otrosproyectos.png"
+              alt=""
+            />
             <p className="text-[black] pt-4">
               Otros proyectos varios. Se utiliza HTML, CSS y React.
             </p>
@@ -408,6 +460,16 @@ function App() {
               <li>Business Agility G4 - ONE</li>
               <li>Front End G4 - ONE</li>
               <li>Emprendimiento G4 - ONE React G4 - ONE</li>
+            </ul>
+          </div>
+          <div className="md:max-w-[30%] p-4 bg-blanco hover:bg-primario transition rounded-md hover:scale-105 flex flex-col justify-around">
+            <img className="h-52" src="/img/footalent.png" alt="" />
+            <ul className="text-[black] text-start list-disc pl-5">
+              <li>Practica FooTalent Group</li>
+              <li>
+                Proyecto real de 60 días de duración con equipo
+                multidisciplinario
+              </li>
             </ul>
           </div>
           <div className="md:max-w-[30%] p-4 bg-blanco hover:bg-primario transition rounded-md hover:scale-105 flex flex-col justify-around">

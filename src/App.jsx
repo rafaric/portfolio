@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./App.css";
 import { Icon } from "@iconify/react";
+import toast, { Toaster } from "react-hot-toast";
 
 function App() {
   const [visible, setVisible] = useState(false);
@@ -36,6 +37,7 @@ function App() {
 
   return (
     <>
+      <Toaster />
       <button id="div-totop" className={seVe} onClick={scrollToTop}>
         <Icon
           icon="ph:caret-up-light"
@@ -97,13 +99,87 @@ function App() {
               />
             </a>
           </div>
-          <a
-            id="about"
-            className="mt-5 px-4 py-2 hover:bg-primario rounded-md md:shadow-none shadow-sm shadow-primario transition font-semibold text-md"
-            href="mailto:rafaelstrongoli@gmail.com"
-          >
-            Contáctame
-          </a>
+          <div className="flex items-center">
+            <p
+              id="about"
+              className="mt-5 px-4 py-2 rounded-md md:shadow-none shadow-sm shadow-primario transition font-semibold text-md"
+              href="mailto:rafaelstrongoli@gmail.com"
+            >
+              Contáctame: <span>rafaelstrongoli@gmail.com</span>
+            </p>
+            <button
+              title="Copiar al portapapeles"
+              onClick={() => {
+                toast.success("Copiado al portapapeles", {
+                  icon: (
+                    <svg
+                      width="26"
+                      height="26"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="1.5"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path d="M9 6.75H7.75a2 2 0 0 0-2 2v8.5a2 2 0 0 0 2 2h8.5a2 2 0 0 0 2-2v-8.5a2 2 0 0 0-2-2H15"></path>
+                      <path d="M14 8.25h-4a1 1 0 0 1-1-1v-1.5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v1.5a1 1 0 0 1-1 1Z"></path>
+                      <path d="M9.75 12.25h4.5"></path>
+                      <path d="M9.75 15.25h4.5"></path>
+                    </svg>
+                  ),
+                  style: {
+                    backgroundColor: "#111111",
+                    color: "#fff",
+                    border: "1px solid #65c9ff",
+                    borderRadius: "15px",
+                  },
+                });
+                navigator.clipboard.writeText("rafaelstrongoli@gmail.com");
+              }}
+              className="mt-5 hover:bg-primario rounded-md md:shadow-none shadow-sm shadow-primario transition font-semibold text-md"
+            >
+              <svg
+                width="46"
+                height="46"
+                fill="none"
+                stroke="currentColor"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="1.5"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path d="M9 6.75H7.75a2 2 0 0 0-2 2v8.5a2 2 0 0 0 2 2h8.5a2 2 0 0 0 2-2v-8.5a2 2 0 0 0-2-2H15"></path>
+                <path d="M14 8.25h-4a1 1 0 0 1-1-1v-1.5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v1.5a1 1 0 0 1-1 1Z"></path>
+                <path d="M9.75 12.25h4.5"></path>
+                <path d="M9.75 15.25h4.5"></path>
+              </svg>
+            </button>
+            <button
+              title="Abrir aplicación de correo"
+              onClick={() =>
+                (window.location = "mailto:rafaelstrongoli@gmail.com")
+              }
+              className="mt-5 hover:bg-primario rounded-md md:shadow-none shadow-sm shadow-primario transition font-semibold text-md"
+            >
+              <svg
+                width="46"
+                height="46"
+                fill="none"
+                stroke="currentColor"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="1.5"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path d="M4.75 7.75a2 2 0 0 1 2-2h10.5a2 2 0 0 1 2 2v8.5a2 2 0 0 1-2 2H6.75a2 2 0 0 1-2-2v-8.5Z"></path>
+                <path d="m5.5 6.5 6.5 5.75 6.5-5.75"></path>
+              </svg>
+            </button>
+          </div>
         </div>
       </section>
       <section className="max-w-4xl justify-center mx-auto my-20">
@@ -152,16 +228,73 @@ function App() {
           </div>
         </div>
       </section>
+
+      {/** PROYECTOS */}
       <section
         id="proyectos"
-        className="max-w-5xl justify-center mx-auto my-20"
+        className="max-w-5xl justify-center mx-auto my-10"
       >
-        <h2 className="text-3xl hover:text-primario pb-5 hover:underline font-title">
+        <h2 className="text-3xl hover:text-primario hover:underline font-title">
           Proyectos
         </h2>
       </section>
       <section id="demos" className="max-w-5xl justify-center mx-auto my-20">
         <div className="flex gap-6 flex-wrap justify-center">
+          {/**SANTICUORE */}
+          <div
+            className="md:max-w-[30%] p-4 bg-blanco hover:bg-primario transition rounded-md hover:scale-105 flex flex-col justify-around group hover:cursor-pointer"
+            onClick={(e) => demoClick(e, "https:/santicuoreph.com")}
+          >
+            <img
+              className="rounded-md cursor-zoom-in"
+              src="/img/santicuore.png"
+              alt=""
+            />
+            <p className="text-[black] pt-4">
+              Landing Page de Santiago Garcia, fotografo profesional -
+              SanticuorePh. Cliente real de la experiencia laboral de FooTalent
+              Group. Trabajo de equipo multidisciplinario utilizando NextJs 14,
+              Typescript, TailwindCSS, React-hook-form, emailJs, y otras
+              librerías.
+            </p>
+            <p className="text-primario group-hover:text-secundario">
+              <a
+                href="https://github.com/FooTalent/Landing-SantiCuoreph"
+                className="hover:text-secundario hover:opacity-60"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Github
+              </a>{" "}
+            </p>
+          </div>
+          {/**NEARBYTOUR */}
+          <div
+            className="md:max-w-[30%] p-4 bg-blanco hover:bg-primario transition rounded-md hover:scale-105 flex flex-col justify-around group hover:cursor-pointer"
+            onClick={(e) => demoClick(e, "https://nearbytour.vercel.app/home")}
+          >
+            <img
+              className="rounded-md cursor-zoom-in"
+              src="/img/nearbytour.png"
+              alt=""
+            />
+            <p className="text-[black] pt-4">
+              NearByTour, desarrollado en la emulación de No-Country, junto con
+              un equipo de UX/UI, FrontEnd y Backend. Trabajo de 1 mes
+              utilizando diseños del equipo. React, Tailwind, axios.
+            </p>
+            <p className="text-primario group-hover:text-secundario">
+              <a
+                href="https://github.com/No-Country/s11-21-react-next"
+                className="hover:text-secundario hover:opacity-60"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Github
+              </a>{" "}
+            </p>
+          </div>
+          {/**
           <div
             className="md:md:max-w-[30%] p-4 bg-blanco hover:bg-primario transition rounded-md hover:scale-105 flex flex-col justify-around group hover:cursor-pointer"
             onClick={(e) =>
@@ -188,7 +321,8 @@ function App() {
               </a>{" "}
             </p>
           </div>
-          <div
+           */}
+          {/*<div
             className="md:max-w-[30%] p-4 bg-blanco hover:bg-primario transition rounded-md hover:scale-105 flex flex-col justify-around group hover:cursor-pointer"
             onClick={(e) =>
               demoClick(e, "https://rafaric.github.io/encriptador-allura/")
@@ -210,6 +344,8 @@ function App() {
               </a>{" "}
             </p>
           </div>
+          */}
+          {/**SOCIALARMY */}
           <div
             className="md:max-w-[30%] p-4 bg-blanco hover:bg-primario transition rounded-md hover:scale-105 flex flex-col justify-around group hover:cursor-pointer"
             onClick={(e) => demoClick(e, "https://socialarmy.vercel.app/")}
@@ -234,6 +370,7 @@ function App() {
               </a>{" "}
             </p>
           </div>
+          {/*
           <div
             className="md:max-w-[30%] p-4 bg-blanco hover:bg-primario transition rounded-md hover:scale-105 flex flex-col justify-around group hover:cursor-pointer"
             onClick={(e) =>
@@ -260,6 +397,7 @@ function App() {
               </a>{" "}
             </p>
           </div>
+          */}
           <div
             className="md:max-w-[30%] p-4 bg-blanco hover:bg-primario transition rounded-md hover:scale-105 flex flex-col justify-around group hover:cursor-pointer"
             onClick={(e) =>
@@ -311,58 +449,7 @@ function App() {
               </a>{" "}
             </p>
           </div>
-          <div
-            className="md:max-w-[30%] p-4 bg-blanco hover:bg-primario transition rounded-md hover:scale-105 flex flex-col justify-around group hover:cursor-pointer"
-            onClick={(e) => demoClick(e, "https://nearbytour.vercel.app/home")}
-          >
-            <img
-              className="rounded-md cursor-zoom-in"
-              src="/img/nearbytour.png"
-              alt=""
-            />
-            <p className="text-[black] pt-4">
-              NearByTour, desarrollado en la emulación de No-Country, junto con
-              un equipo de UX/UI, FrontEnd y Backend. Trabajo de 1 mes
-              utilizando diseños del equipo. React, Tailwind, axios.
-            </p>
-            <p className="text-primario group-hover:text-secundario">
-              <a
-                href="https://github.com/No-Country/s11-21-react-next"
-                className="hover:text-secundario hover:opacity-60"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Github
-              </a>{" "}
-            </p>
-          </div>
-          <div
-            className="md:max-w-[30%] p-4 bg-blanco hover:bg-primario transition rounded-md hover:scale-105 flex flex-col justify-around group hover:cursor-pointer"
-            onClick={(e) => demoClick(e, "https:/santicuoreph.com")}
-          >
-            <img
-              className="rounded-md cursor-zoom-in"
-              src="/img/santicuore.png"
-              alt=""
-            />
-            <p className="text-[black] pt-4">
-              Landing Page de Santiago Garcia, fotografo profesional -
-              SanticuorePh. Cliente real de la experiencia laboral de FooTalent
-              Group. Trabajo de equipo multidisciplinario utilizando NextJs 14,
-              Typescript, TailwindCSS, React-hook-form, emailJs, y otras
-              librerías.
-            </p>
-            <p className="text-primario group-hover:text-secundario">
-              <a
-                href="https://github.com/FooTalent/Landing-SantiCuoreph"
-                className="hover:text-secundario hover:opacity-60"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Github
-              </a>{" "}
-            </p>
-          </div>
+
           <div
             className="md:max-w-[30%] p-4 bg-blanco hover:bg-primario transition rounded-md hover:scale-105 flex flex-col justify-around group hover:cursor-pointer"
             onClick={(e) =>
@@ -429,7 +516,7 @@ function App() {
               <li>HTML y CSS</li>
               <li>Introducción a la Programación</li>
               <li>JavaScript</li>
-              <li>React (En curso)</li>
+              <li>React</li>
             </ul>
           </div>
           <div className="md:max-w-[30%] p-4 bg-blanco hover:bg-primario transition rounded-md hover:scale-105 flex flex-col justify-around">

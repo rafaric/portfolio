@@ -401,21 +401,22 @@ function App() {
           <div
             className="md:max-w-[30%] p-4 bg-blanco hover:bg-primario transition rounded-md hover:scale-105 flex flex-col justify-around group hover:cursor-pointer"
             onClick={(e) =>
-              demoClick(e, "https://renthouse-git-main-rafaric.vercel.app/")
+              demoClick(e, "https://world-stadistics.vercel.app/")
             }
           >
             <img
               className="rounded-md cursor-zoom-in"
-              src="/img/bnb.png"
+              src="/img/World_Stadistics.png"
               alt=""
             />
             <p className="text-[black] pt-4">
-              Clon de Airbnb. Se utiliza HTML, Tailwind, React, NodeJS, MongoDb,
-              Prisma.
+              Página para visualizar distintas estadísticas mundiales de algunos
+              países. Se utiliza React 19, TailwindCSS 4, NextJS y se consume la
+              API externa -World Bank API-
             </p>
             <p className="text-primario group-hover:text-secundario">
               <a
-                href="https://github.com/rafaric/airbnb-clone"
+                href="https://github.com/rafaric/world-stadistics"
                 className="hover:text-secundario hover:opacity-60"
                 target="_blank"
                 rel="noreferrer"
